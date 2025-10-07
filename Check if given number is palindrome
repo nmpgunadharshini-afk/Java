@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+public class PalindromeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num, original, reversed = 0, remainder;
+        num = sc.nextInt();
+        if (num < 100 || num > 999) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        original = num;
+        while (num != 0) {
+            remainder = num % 10;
+            reversed = reversed * 10 + remainder;
+            num /= 10;
+        }
+        if (original == reversed)
+            System.out.println("palindrome");
+        else
+            System.out.println("not palindrome");
+    }
+}
