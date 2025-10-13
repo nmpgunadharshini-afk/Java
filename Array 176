@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); 
+        int[] doorNumbers = new int[n];
+        for (int i = 0; i < n; i++) {
+        doorNumbers[i] = sc.nextInt(); 
+}
+        int target = sc.nextInt();
+        boolean found = false;
+        for (int i = 0; i < n; i++) {
+        if (doorNumbers[i] == target) {
+        System.out.printf("Door Number is %03d-DN\n", i);
+        found = true;
+        break;
+}
+}
+        if (!found) {
+        System.out.println("-1");
+        }
+    }
+}
